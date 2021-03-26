@@ -29,12 +29,7 @@ const Register = (props) => {
     },[])
 
     function registerUser(event){
-
         event.preventDefault();
-      /*   var emailId=email;
-        var password=pwd;
-        var confirmPassword=confirmPwd;
-        var myfile1=myfile; */
         if(confirmPwd==pwd){
             if(pwd.length>5){
                 auth.createUserWithEmailAndPassword(email,pwd).then((cred)=>{
@@ -48,14 +43,11 @@ const Register = (props) => {
             else{
                 setMsg("Password should have atleast 6 characters");
             }
-            
         }
         else{
             setMsg("Password and confirm password should be same");
         }
-        
     }
-
     function signOut(){
         auth.signOut().then(()=>{
             router.push("/");
