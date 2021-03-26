@@ -25,7 +25,6 @@ const Register = (props) => {
              setProfile(imgurl)
             });
         }
-       
     },[])
 
     function registerUser(event){
